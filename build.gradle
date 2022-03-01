@@ -1,0 +1,26 @@
+plugins {
+    id 'java'
+}
+
+group 'de.az.ware'
+version '0.1'
+
+allprojects {
+    repositories {
+        mavenCentral()
+        maven { url "https://jitpack.io" }
+    }
+}
+
+dependencies {
+    implementation 'com.github.Abstractolotl:az-connection:b38ea63'
+    implementation 'com.github.Abstractolotl:azware-common:c8adf91'
+
+    implementation "org.java-websocket:Java-WebSocket:1.5.2"
+}
+
+java {
+    toolchain {
+        languageVersion.set(JavaLanguageVersion.of(11))
+    }
+}
